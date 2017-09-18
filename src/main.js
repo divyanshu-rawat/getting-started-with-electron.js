@@ -4,6 +4,8 @@ const app = electron.app;
 
 const countdown = require('./count');
 
+const ipc = electron.ipcMain;
+
 let mainWindow;
 // In order to see some UI in my electron application I have importing browserwindow module.
 
@@ -22,8 +24,6 @@ app.on('ready', _=> {
 
 	mainWindow.loadURL('file://' + __dirname + '/index.html');
 
-	countdown();
-
 	mainWindow.on('closed',_ =>{
 
 		console.log("Closed");
@@ -32,5 +32,19 @@ app.on('ready', _=> {
 
 	});
 
-
 })
+
+ipc.on('countdown-start', _=>{
+
+		countdown(count =>{
+
+			// webContents is a just a Event Emitter instance !
+			mainWindow.webContents.send('count',count);
+
+		});
+		
+	})
+
+
+
+

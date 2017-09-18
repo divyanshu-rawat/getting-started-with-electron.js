@@ -1,12 +1,10 @@
 
 
-module.exports = function countdown(){
+module.exports = function countdown(tick){
 
 	let count = 10;
 	var interval = setInterval(_ => {
-		count--;
-
-		console.log("count : ",count);
+		tick(count--);
 		if(count == 0){
 
 			clearInterval(interval); 
