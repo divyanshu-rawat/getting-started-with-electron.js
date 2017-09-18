@@ -14,9 +14,9 @@
 	height: 100vh;
 }
 
-.dispCount{
+#dispCount{
 
 	margin-bottom: 40px;
-	font-size: 100px;
+	font-size: 50px !important;
 }
 
