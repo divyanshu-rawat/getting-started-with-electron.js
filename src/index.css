@@ -1,22 +1,16 @@
-
-
-.title{
-
-	font-family: sans-serif;
+.title {
+  font-family: sans-serif;
 }
 
-.container{
-
-	display: flex !important;
-	flex-direction: column !important;
-	justify-content: center !important;
-	align-items: center;
-	height: 100vh;
+.container {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center;
+  height: 100vh;
 }
 
-#dispCount{
-
-	margin-bottom: 40px;
-	font-size: 50px !important;
+#dispCount {
+  margin-bottom: 40px;
+  font-size: 50px !important;
 }
-

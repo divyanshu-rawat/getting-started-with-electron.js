@@ -1,7 +1,5 @@
 
-
 module.exports = function countdown(tick){
-
 	let count = 10;
 	var interval = setInterval(_ => {
 		tick(count--);
@@ -10,5 +8,4 @@ module.exports = function countdown(tick){
 			clearInterval(interval); 
 		}
 	},500)
-
 }
